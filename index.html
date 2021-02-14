@@ -12,60 +12,61 @@
 <title>Current Weather</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-6 col-md-6">
-                <h1>Hey internet, whats the weather</h1>
-                <form>
-                    <div class="mb-3">
-                        <label for="cityName" class="form-label">City</label>
-                        <input type="City" class="form-control" id="city-name" aria-describedby="cityname">
-                        <label for="countryName" class="form-label">Country</label>
-                        <input type="Country" class="form-control" id="country-name" aria-describedby="countryname">
-                    <button type="button" class="btn btn-primary"onclick="getData()">Submit</button>
-                </form>
+    <div class="weather-image">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <h1 class="title-heading">Hey internet, whats the weather?</h1>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cityName" class="form-label">City</label>
+                            <input onsubmit="getdata()" type="City" class="form-control" id="city-name" aria-describedby="cityname">
+                            <label for="countryName" class="form-label">Country</label>
+                            <input onsubmit="getdata()" type="Country" class="form-control" id="country-name" aria-describedby="countryname">
+                        <button type="button" class="btn btn-primary"onclick="getData()">Submit</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="weather-box col-3 col-md-3">City
-                <section class="weather-content" id ="city"></section>
+            <div class="row">
+                <div class="weather-box col-3 col-md-3">City
+                    <section class="weather-content" id ="city"></section>
+                </div>
+                <div class="weather-box col-3 col-md-3">Country
+                    <section class="weather-content" id ="country"></section>
+                </div>
             </div>
-            <div class="weather-box col-3 col-md-3">Country
-                <section class="weather-content" id ="country"></section>
+            <div class="row">
+                <div class="col-4 col-md-4 weather-box">Conditions
+                    <section class="weather-content" id="description"></section>
+                </div>
+                <div class="col-2 col-md-2 weather-box">Cloud Cover
+                    <section class="weather-content" id="cloud"></section>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 col-md-4 weather-box">Conditions
-                <section class="weather-content" id="description"></section>
+            <div class="row">
+                <div class="weather-box col-2 col-md-2">High
+                    <section class="weather-content" id="high"></section>
+                </div>
+                <div class="weather-box col-2 col-md-2"> Feels Like
+                    <section class="weather-content" id="feel"></section>
+                </div>
+                <div class="weather-box col-3 col-md-2">Low
+                    <section class="weather-content" id="low"></section>
+                </div>
             </div>
-            <div class="col-2 col-md-2 weather-box">Cloud Cover
-                <section class="weather-content" id="cloud"></section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="weather-box col-2 col-md-2">High
-                <section class="weather-content" id="high"></section>
-            </div>
-            <div class="weather-box col-2 col-md-2"> Feels Like
-                <section class="weather-content" id="feel"></section>
-            </div>
-            <div class="weather-box col-3 col-md-2">Low
-                <section class="weather-content" id="low"></section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="weather-box col-2 col-md-2"> Wind Speed
-                <section class="weather-content" id="wind"></section>
-            </div>
-            <div class="weather-box col-2 col-md-2"> Wind Direction
-                <section class="weather-content" id="wind-dir"></section>
-            </div>
-            <div class="weather-box col-2 col-md-2">Humidity
-                <section class="weather-content" id="humid"></section>
+            <div class="row">
+                <div class="weather-box col-2 col-md-2"> Wind Speed
+                    <section class="weather-content" id="wind"></section>
+                </div>
+                <div class="weather-box col-2 col-md-2"> Wind Direction
+                    <section class="weather-content" id="wind-dir"></section>
+                </div>
+                <div class="weather-box col-2 col-md-2">Humidity
+                    <section class="weather-content" id="humid"></section>
+                </div>
             </div>
         </div>
     </div>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
